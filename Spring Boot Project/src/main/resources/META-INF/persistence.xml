@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.ejemplo.tiendaalamano_tiendaalamano_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.ejemplo.tiendaalamano.model.Administrador</class>
+    <class>com.ejemplo.tiendaalamano.model.Domiciliario</class>
+    <class>com.ejemplo.tiendaalamano.model.Configpunto</class>
+    <class>com.ejemplo.tiendaalamano.model.Impuesto</class>
+    <class>com.ejemplo.tiendaalamano.model.Pedido</class>
+    <class>com.ejemplo.tiendaalamano.model.Envio</class>
+    <class>com.ejemplo.tiendaalamano.model.Marca</class>
+    <class>com.ejemplo.tiendaalamano.model.Categoria</class>
+    <class>com.ejemplo.tiendaalamano.model.Pedidodetalle</class>
+    <class>com.ejemplo.tiendaalamano.model.Horariodisponible</class>
+    <class>com.ejemplo.tiendaalamano.model.Mensaje</class>
+    <class>com.ejemplo.tiendaalamano.model.Producto</class>
+    <class>com.ejemplo.tiendaalamano.model.Carrito</class>
+    <class>com.ejemplo.tiendaalamano.model.Punto</class>
+    <class>com.ejemplo.tiendaalamano.model.Formapago</class>
+    <class>com.ejemplo.tiendaalamano.model.Direccion</class>
+    <class>com.ejemplo.tiendaalamano.model.Cuotascredito</class>
+    <class>com.ejemplo.tiendaalamano.model.Puntoventa</class>
+    <class>com.ejemplo.tiendaalamano.model.Cupones</class>
+    <class>com.ejemplo.tiendaalamano.model.Pqr</class>
+    <class>com.ejemplo.tiendaalamano.model.Usuario</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hackathon_pythoneye"/>
+      <property name="javax.persistence.jdbc.user" value="user_spring"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456"/>
+    </properties>
+  </persistence-unit>
+</persistence>
