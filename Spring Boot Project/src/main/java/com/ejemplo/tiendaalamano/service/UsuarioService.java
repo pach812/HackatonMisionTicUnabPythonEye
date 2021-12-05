@@ -7,9 +7,9 @@ import com.ejemplo.tiendaalamano.model.Usuario;
 
 public interface UsuarioService {
 	public List<Usuario> findAll();
-	public Optional<Usuario> findById(Long id);
-	public List<Usuario> login(String username, String password);
+	public Optional<Usuario> findById(Integer id);
+	public Usuario login(String username, String password);
 	public Usuario save(Usuario Usuario);
-	public void deleteById(Long id);
+	public void deleteById(Integer id);
 	
 }

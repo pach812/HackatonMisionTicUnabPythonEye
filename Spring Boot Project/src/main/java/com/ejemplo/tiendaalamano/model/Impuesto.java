@@ -7,21 +7,16 @@ package com.ejemplo.tiendaalamano.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -47,8 +42,8 @@ public class Impuesto implements Serializable {
     @Basic(optional = false)
     @Column(name = "precio_impuesto")
     private BigDecimal precioImpuesto;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codImpuesto", fetch = FetchType.EAGER)
-    private List<Producto> productoList;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codImpuesto", fetch = FetchType.EAGER)
+//    private List<Producto> productoList;
 
     public Impuesto() {
     }
@@ -87,14 +82,14 @@ public class Impuesto implements Serializable {
         this.precioImpuesto = precioImpuesto;
     }
 
-    @XmlTransient
-    public List<Producto> getProductoList() {
-        return productoList;
-    }
-
-    public void setProductoList(List<Producto> productoList) {
-        this.productoList = productoList;
-    }
+//    @XmlTransient
+//    public List<Producto> getProductoList() {
+//        return productoList;
+//    }
+//
+//    public void setProductoList(List<Producto> productoList) {
+//        this.productoList = productoList;
+//    }
 
     @Override
     public int hashCode() {

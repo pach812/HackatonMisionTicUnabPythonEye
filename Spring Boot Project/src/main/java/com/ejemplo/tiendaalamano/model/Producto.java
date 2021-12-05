@@ -9,7 +9,6 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -47,18 +46,66 @@ public class Producto implements Serializable {
     private short estadoProducto;
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codProducto", fetch = FetchType.EAGER)
 //    private List<Pedidodetalle> pedidodetalleList;
-    @JoinColumn(name = "cod_categoria", referencedColumnName = "cod_categoria")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private Categoria codCategoria;
-    @JoinColumn(name = "cod_impuesto", referencedColumnName = "cod_impuesto")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private Impuesto codImpuesto;
-    @JoinColumn(name = "cod_marca", referencedColumnName = "cod_marca")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private Marca codMarca;
-    @JoinColumn(name = "cod_cupon", referencedColumnName = "cod_cupon")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private Cupones codCupon;
+    
+    @ManyToOne
+    @JoinColumn(name = "cod_categoria")
+    private Categoria categoria;
+    @ManyToOne
+    @JoinColumn(name = "cod_impuesto")
+    private Impuesto impuesto;
+    @ManyToOne
+    @JoinColumn(name = "cod_marca")
+    private Marca marca;
+    @ManyToOne
+    @JoinColumn(name = "cod_cupon")
+    private Cupones cupones;
+    
+//    @JoinColumn(name = "cod_categoria", referencedColumnName = "cod_categoria")
+//    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+//    private Categoria codCategoria;
+//    @JoinColumn(name = "cod_impuesto", referencedColumnName = "cod_impuesto")
+//    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+//    private Impuesto codImpuesto;
+//    @JoinColumn(name = "cod_marca", referencedColumnName = "cod_marca")
+//    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+//    private Marca codMarca;
+//    @JoinColumn(name = "cod_cupon", referencedColumnName = "cod_cupon")
+//    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+//    private Cupones codCupon;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria Categoria) {
+        this.categoria = Categoria;
+    }
+
+    public Impuesto getImpuesto() {
+        return impuesto;
+    }
+
+    public void setImpuesto(Impuesto Impuesto) {
+        this.impuesto = Impuesto;
+    }
+
+    public Marca getMarca() {
+        return marca;
+    }
+
+    public void setMarca(Marca Marca) {
+        this.marca = Marca;
+    }
+
+    public Cupones getCupones() {
+        return cupones;
+    }
+
+    public void setCupones(Cupones Cupones) {
+        this.cupones = Cupones;
+    }
+    
+    
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codProducto", fetch = FetchType.EAGER)
 //    private List<Carrito> carritoList;
 
@@ -108,37 +155,37 @@ public class Producto implements Serializable {
 //        this.pedidodetalleList = pedidodetalleList;
 //    }
 
-    public Categoria getCodCategoria() {
-        return codCategoria;
-    }
-
-    public void setCodCategoria(Categoria codCategoria) {
-        this.codCategoria = codCategoria;
-    }
-
-    public Impuesto getCodImpuesto() {
-        return codImpuesto;
-    }
-
-    public void setCodImpuesto(Impuesto codImpuesto) {
-        this.codImpuesto = codImpuesto;
-    }
-
-    public Marca getCodMarca() {
-        return codMarca;
-    }
-
-    public void setCodMarca(Marca codMarca) {
-        this.codMarca = codMarca;
-    }
-
-    public Cupones getCodCupon() {
-        return codCupon;
-    }
-
-    public void setCodCupon(Cupones codCupon) {
-        this.codCupon = codCupon;
-    }
+//    public Categoria getCodCategoria() {
+//        return codCategoria;
+//    }
+//
+//    public void setCodCategoria(Categoria codCategoria) {
+//        this.codCategoria = codCategoria;
+//    }
+//
+//    public Impuesto getCodImpuesto() {
+//        return codImpuesto;
+//    }
+//
+//    public void setCodImpuesto(Impuesto codImpuesto) {
+//        this.codImpuesto = codImpuesto;
+//    }
+//
+//    public Marca getCodMarca() {
+//        return codMarca;
+//    }
+//
+//    public void setCodMarca(Marca codMarca) {
+//        this.codMarca = codMarca;
+//    }
+//
+//    public Cupones getCodCupon() {
+//        return codCupon;
+//    }
+//
+//    public void setCodCupon(Cupones codCupon) {
+//        this.codCupon = codCupon;
+//    }
 
 //    @XmlTransient
 //    public List<Carrito> getCarritoList() {

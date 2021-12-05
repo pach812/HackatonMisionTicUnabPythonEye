@@ -6,20 +6,16 @@
 package com.ejemplo.tiendaalamano.model;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -44,8 +40,8 @@ public class Domiciliario implements Serializable {
     @Basic(optional = false)
     @Column(name = "celular_domi")
     private String celularDomi;
-    @OneToMany(mappedBy = "codDomi", fetch = FetchType.EAGER)
-    private List<Envio> envioList;
+//    @OneToMany(mappedBy = "codDomi", fetch = FetchType.EAGER)
+//    private List<Envio> envioList;
 
     public Domiciliario() {
     }
@@ -84,14 +80,14 @@ public class Domiciliario implements Serializable {
         this.celularDomi = celularDomi;
     }
 
-    @XmlTransient
-    public List<Envio> getEnvioList() {
-        return envioList;
-    }
-
-    public void setEnvioList(List<Envio> envioList) {
-        this.envioList = envioList;
-    }
+//    @XmlTransient
+//    public List<Envio> getEnvioList() {
+//        return envioList;
+//    }
+//
+//    public void setEnvioList(List<Envio> envioList) {
+//        this.envioList = envioList;
+//    }
 
     @Override
     public int hashCode() {

@@ -48,8 +48,8 @@ public class Cupones implements Serializable {
     @Basic(optional = false)
     @Column(name = "estado_cupon")
     private String estadoCupon;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codCupon", fetch = FetchType.EAGER)
-    private List<Producto> productoList;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cupones", fetch = FetchType.EAGER)
+//    private List<Producto> productoList;
 
     public Cupones() {
     }
@@ -97,14 +97,14 @@ public class Cupones implements Serializable {
         this.estadoCupon = estadoCupon;
     }
 
-    @XmlTransient
-    public List<Producto> getProductoList() {
-        return productoList;
-    }
-
-    public void setProductoList(List<Producto> productoList) {
-        this.productoList = productoList;
-    }
+//    @XmlTransient
+//    public List<Producto> getProductoList() {
+//        return productoList;
+//    }
+//
+//    public void setProductoList(List<Producto> productoList) {
+//        this.productoList = productoList;
+//    }
 
     @Override
     public int hashCode() {
